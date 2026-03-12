@@ -1,0 +1,64 @@
+{
+    "bieskes": [
+        {
+            "id": 0,
+            "name": "Earmuff",
+			"tagline": "It keeps itself warm with its ears.",
+			"size": "medium",
+			"classification": "mammal",
+			"talent": "digger",
+			"colors": [ "ghost", "tan", "romantic" ],
+			"description": "Earmuff are Bieskes from colder areas. When the temperature drops, it wraps one ear around its neck like a scarf. Some like to keep this look the entire year since it prevents their ears from dragging on the ground."
+        },
+        {
+            "id": 1,
+            "name": "Purragonfly",
+			"tagline": "A creature very proud of its wings and colors.",
+			"size": "tiny",
+			"classification": "insect",
+			"talent": "pollinator",
+			"colors": [ "green", "blue", "romantic" ],
+			"description": "A swift flyer and quite headstrong, Purragonfly can be hard to train. If anything, they tend to train their owners more than the other way around, teaching them how they want to be taken care of."
+        },
+        {
+            "id": 2,
+            "name": "Skyfox",
+			"tagline": "It can hear much better than it can see.",
+			"size": "medium",
+			"classification": "mammal",
+			"talent": "harvester",
+			"colors": [ "blue", "romantic", "black" ],
+			"description": "Skyfoxes are nocturnal Bieskes, and spend most of their day snoozing upside-down. Their ears are incredibly sensitive, and they do well in an environment with not too much noise."
+        },
+        {
+            "id": 3,
+            "name": "Puppipede",
+			"tagline": "Its many legs are good for lots of tricks.",
+			"size": "medium",
+			"classification": "mammal",
+			"talent": "digger",
+			"colors": [ "tan", "black", "blue" ],
+			"description": "This Bieske is very smart and thrives when being trained. The more tricks you can teach it, the better. The pitter-patter of their many legs is sure to liven up any household."
+        },
+        {
+            "id": 4,
+            "name": "Wurmy",
+			"tagline": "Hm. This might just be a worm.",
+			"size": "tiny",
+			"classification": "worm",
+			"talent": "digger",
+			"colors": [ "romantic", "green", "ghost" ],
+			"description": "At first sight this might seem like one of the least interesting Bieskes, but Wurmy fans will tell you otherwise. They are some of the most passionate people and love spoiling their little worms rotten. Wurmy are low maintenance and have no fur, making them great pets."
+        },
+		{
+            "id": 5,
+            "name": "Frogster",
+			"tagline": "Known for its incredibly elastic cheeks.",
+			"size": "small",
+			"classification": "amphibian",
+			"talent": "waterer",
+			"colors": [ "blue", "ghost", "green" ],
+			"description": "Ever seen this Bieske's cheeks full of water? If you have, you've probably also gotten sprayed - they can be a bit of a prankster."
+        }
+    ]
+}

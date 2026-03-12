@@ -1,0 +1,35 @@
+#root {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: grid;
+  grid-template-columns: max(15vw, 200px) auto;
+  min-height: 100vh;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+#navigation {
+	min-width: 200px;
+	background: #ddd;
+}
+
+
+#navigation .menu .menuitem {
+	padding: 0.5rem;
+	display: block;
+}
+
+#navigation .menu .menuitem:hover {
+	background: #ccc; 
+}
+
+#pagecontent { 
+	padding: 2rem;
+}
+
+p { text-align: left; }

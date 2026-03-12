@@ -1,0 +1,66 @@
+#bieskePage { 
+	margin: 2rem;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	gap: 2rem;
+	grid-template-areas: "imageblock infoblock"
+						 "propertiesblock infoblock";
+}
+
+#bieskePage .imageblock {
+	border: 8px solid #ddd;
+	border-radius: 6px;
+	height: 200px;
+	width: 200px;
+	grid-area: imageblock;
+}
+
+#bieskePage .imageblock img.outline {
+	position: absolute;
+    z-index: 1;
+}
+
+#bieskePage .imageblock .colors svg { 
+	width: 200px;
+	height: 200px;
+}
+
+/* TAN COLORS */
+#bieskePage .imageblock .colors.tan path { fill: #f5b155; }
+#bieskePage .imageblock .colors.tan #body {	fill: #df350e; }
+#bieskePage .imageblock .colors.tan .detail { fill: bisque }
+
+/* GREEN COLORS */
+#bieskePage .imageblock .colors.green path { fill: greenyellow; }
+#bieskePage .imageblock .colors.green #body { fill: darkcyan; }
+
+/* BLUE COLORS */
+#bieskePage .imageblock .colors.blue path { fill: lightblue; }
+#bieskePage .imageblock .colors.blue #body { fill: slateblue; }
+
+/* BLACK COLORS */
+#bieskePage .imageblock .colors.black path{ fill: white; }
+#bieskePage .imageblock .colors.black #body { fill: black; }
+
+/* GHOST COLORS */
+#bieskePage .imageblock .colors.ghost path { fill: grey; }
+#bieskePage .imageblock .colors.ghost #body { fill: lightgrey; }
+
+/* ROMANTIC COLORS */
+#bieskePage .imageblock .colors.romantic path { fill: darkmagenta; }
+#bieskePage .imageblock .colors.romantic #body { fill: hotpink; }
+
+#bieskePage .infoblock {
+	padding: 2rem;
+	text-align: left;
+	grid-area: infoblock;
+}
+
+#bieskePage .propertiesblock {
+	grid-area: propertiesblock;
+	font-size: 11pt;
+}
+
+#bieskePage .propertiesblock label {
+	display: block;
+}
