@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import BieskePage from './components/BieskePage/BieskePage'
 import Navigation from './components/Navigation/Navigation'
 import HomePage from './components/HomePage/HomePage'
@@ -8,10 +7,12 @@ import './App.css'
 
 function App() {
 
+	const bieskes: BieskeInterface[] = bieskesJson.bieskes;
+	
 	return (
 		<BrowserRouter>
 			
-			<Navigation bieskes={bieskesJson.bieskes} />
+			<Navigation bieskes={bieskes} />
 			
 			<div id="pagecontent">
 				<h1>Bieskes Compendium</h1>
@@ -19,8 +20,8 @@ function App() {
 			  {/* Routes */}
 				<Routes>
 					<Route path="/" element={<HomePage />} />
-					{ bieskesJson.bieskes.map((bieske, index) => (
-					<Route path={"/bieske/"+bieske.name} element={<BieskePage bieske={bieskesJson.bieskes.find(bies => bies.name === bieske.name)} />} />))}
+					{ bieskes.map((bieske: BieskeInterface, index: number) => (
+					<Route key={index} path={"/bieske/"+bieske.name} element={<BieskePage bieske={bieskes.find(bies => bies.name === bieske.name)} />} />))}
 				</Routes>
 			</div>
 			

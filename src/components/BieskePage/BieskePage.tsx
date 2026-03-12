@@ -1,8 +1,8 @@
 import './BieskePage.css'
 import { useState } from 'react'
 
-function InfoBlock(props) {
-	const {tagline,description,name} = props;
+function InfoBlock(props: any) {
+	const {tagline, description, name}: string = props;
 	return (
 		<div className="infoblock">
 			<h2>{name}</h2>
@@ -13,7 +13,8 @@ function InfoBlock(props) {
 }
 
 function ImageBlock(props) {
-	const {name, colors} = props;
+	const {name}: string = props;
+	const colors: string[] = props.colors;
 	
 	const [currentColor, setColor] = useState(colors[0]);
 	const handleChange = (event) => {
@@ -36,7 +37,7 @@ function ImageBlock(props) {
 		<div className="imageblock">
 			<div id="colorsContainer" className={"colors " + currentColor} width="200px"></div>
 			<select value={currentColor} onChange={handleChange}>
-			{ colors.map((color, index) => (<option value={color} key={index}>{color}</option>))}
+			{ colors.map((color: string, index: number) => (<option value={color} key={index}>{color}</option>))}
 		</select>
 		</div>
 		
@@ -44,8 +45,8 @@ function ImageBlock(props) {
 	);
 }
 
-function PropertiesBlock(props) {
-	const { size, classification} = props;
+function PropertiesBlock(props: any) {
+	const {size, classification}: string = props;
 	return (
 		<div className="propertiesblock">
 			<label>Size: {size}</label>
@@ -54,8 +55,8 @@ function PropertiesBlock(props) {
 	);
 }
 
-function BieskePage({bieske}) {
-  return (
+function BieskePage({bieske}: BieskeInterface) {
+	return (
 	<div id="bieskePage">
 		<ImageBlock name={bieske.name} colors={bieske.colors} />
 		<PropertiesBlock size={bieske.size} classification={bieske.classification} />
