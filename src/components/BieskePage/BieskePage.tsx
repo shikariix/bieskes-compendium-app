@@ -1,4 +1,5 @@
 import './BieskePage.css'
+import BieskeInterface from '../interfaces/BieskeInterface'
 import { useState } from 'react'
 
 function InfoBlock(props: any) {

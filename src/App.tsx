@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import BieskePage from './components/BieskePage/BieskePage'
 import Navigation from './components/Navigation/Navigation'
 import HomePage from './components/HomePage/HomePage'
+import BieskeInterface from '.interfaces/BieskeInterface'
 import bieskesJson from './assets/data/bieskesData.json'
 import './App.css'
 
