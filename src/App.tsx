@@ -2,13 +2,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import BieskePage from './components/BieskePage/BieskePage'
 import Navigation from './components/Navigation/Navigation'
 import HomePage from './components/HomePage/HomePage'
-import BieskeInterface from '.interfaces/BieskeInterface'
+import type { Bieske } from './types/Bieske'
 import bieskesJson from './assets/data/bieskesData.json'
 import './App.css'
 
 function App() {
 
-	const bieskes: BieskeInterface[] = bieskesJson.bieskes;
+	const bieskes: Bieske[] = bieskesJson.bieskes;
 	
 	return (
 		<BrowserRouter>
@@ -21,7 +21,7 @@ function App() {
 			  {/* Routes */}
 				<Routes>
 					<Route path="/" element={<HomePage />} />
-					{ bieskes.map((bieske: BieskeInterface, index: number) => (
+					{ bieskes.map((bieske: Bieske, index: number) => (
 					<Route key={index} path={"/bieske/"+bieske.name} element={<BieskePage bieske={bieskes.find(bies => bies.name === bieske.name)} />} />))}
 				</Routes>
 			</div>

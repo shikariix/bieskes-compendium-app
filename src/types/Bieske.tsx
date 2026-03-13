@@ -1,4 +1,4 @@
-interface BieskeInterface {
+export type Bieske = {
 	id: number,
 	name: string,
 	tagline: string,

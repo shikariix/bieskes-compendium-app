@@ -1,5 +1,5 @@
 import './BieskePage.css'
-import BieskeInterface from '../interfaces/BieskeInterface'
+import type { Bieske } from '../types/Bieske'
 import { useState } from 'react'
 
 function InfoBlock(props: any) {
@@ -56,7 +56,7 @@ function PropertiesBlock(props: any) {
 	);
 }
 
-function BieskePage({bieske}: BieskeInterface) {
+function BieskePage({bieske}: Bieske) {
 	return (
 	<div id="bieskePage">
 		<ImageBlock name={bieske.name} colors={bieske.colors} />
