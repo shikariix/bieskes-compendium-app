@@ -18,5 +18,5 @@
 	<path id="shape7" class="marking" transform="translate(29.1149996008603, 32.3099995570598)" fill="#77b3fe" fill-rule="evenodd" d="M0.045 0.405L1.485 0L1.71 1.35L0 2.385C0 2.385 0.015 1.725 0.045 0.405Z" sodipodi:nodetypes="ccccc"/>
 	<path id="shape8" class="detail" transform="translate(38.8199994678138, 9.41999987086053)" fill="#77b3fe" fill-rule="evenodd" d="M0 0C0.96 2.2 1.4 3.84 1.32 4.92C1.24 6 1.2 6.54 1.2 6.54C3 7.7 3.96 7.68 4.08 6.48C4.26 4.68 4.26 4.68 0 0Z" sodipodi:nodetypes="czccc"/>
 	
-	<image width="48" height="48" href="/img/TinyBieskes_Puppipede_outline.png" />
+	<image width="48" height="48" href="/bieskes-compendium-app/img/TinyBieskes_Puppipede_outline.png" />
 </svg>
