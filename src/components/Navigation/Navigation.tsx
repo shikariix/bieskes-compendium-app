@@ -1,4 +1,4 @@
-import type { Bieske } from '../types/Bieske'
+import type { Bieske } from '@utils/Bieske'
 import { Link } from 'react-router-dom';
 
 function Navigation(props: any) {
@@ -10,7 +10,7 @@ function Navigation(props: any) {
 			<nav className="menu">
 				<Link className="menuitem" to="/">Home</Link>
 				{ props.bieskes.map((bieske: Bieske, index: number) => (
-					<Link className="menuitem" to={"/bieske/" + bieske.name} value={bieske.id} key={index}>{bieske.name}</Link>
+					<Link className="menuitem" to={"/bieske/" + bieske.name} key={index}>{bieske.name}</Link>
 				))}
 			</nav>
 			

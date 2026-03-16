@@ -28,11 +28,13 @@
 	"resolveJsonModule": true,
 	"esModuleInterop": true,
 	
-	"baseUrl": ".",
+	"forceConsistentCasingInFileNames": true,
+	
+	"baseUrl": "./src",
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": ["src/*"],
+	  "@utils/*": ["utils/*"]
 	}
   },
-  "include": ["src/*"],
-  "exclude": ["**/*.stories.ts"]
+  "include": ["src/*"]
 }

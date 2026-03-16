@@ -1,5 +1,5 @@
 import './BieskePage.css'
-import type { Bieske } from '../types/Bieske'
+import type { Bieske } from '@utils/Bieske'
 import { useState } from 'react'
 
 function InfoBlock(props: any) {
@@ -24,15 +24,17 @@ function ImageBlock(props: any) {
 	  .then(svgText => {
 		// Inject SVG into the DOM
 		const container = document.getElementById('colorsContainer');
-		container.innerHTML = svgText;
-		if (!props.colors.includes(currentColor)) { setColor(props.colors[0]); }
+		if (container != null) { 
+			container.innerHTML = svgText;
+			if (!props.colors.includes(currentColor)) { setColor(props.colors[0]); }
+		}
 	 
 	  });
 	  //old image: <img src={"/img/TinyBieskes_"+name+".png"} alt={name} loading="eager" />
 	return (
 	<>
 		<div className="imageblock">
-			<div id="colorsContainer" className={"colors " + currentColor} width="200px"></div>
+			<div id="colorsContainer" className={"colors " + currentColor}></div>
 			<select value={currentColor} onChange={handleChange}>
 			{ props.colors.map((color: string, index: number) => (<option value={color} key={index}>{color}</option>))}
 		</select>
@@ -51,7 +53,7 @@ function PropertiesBlock(props: any) {
 	);
 }
 
-function BieskePage({bieske}: Bieske) {
+function BieskePage({bieske}: {bieske: Bieske}) {
 	return (
 	<div id="bieskePage">
 		<ImageBlock name={bieske.name} colors={bieske.colors} />
