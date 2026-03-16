@@ -14,7 +14,7 @@ function InfoBlock(props: any) {
 
 function ImageBlock(props: any) {
 	const [currentColor, setColor] = useState(props.colors[0]);
-	const handleChange = (event) => {
+	const handleChange = (event: any) => {
 		setColor(event.target.value)
 	}
   
