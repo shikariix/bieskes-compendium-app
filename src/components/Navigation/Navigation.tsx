@@ -8,9 +8,9 @@ function Navigation(props: any) {
 			<h2>Navigation</h2>
 			<span>Select a page to view it.</span>
 			<nav className="menu">
-				<Link className="menuitem" to="/">Home</Link>
+				<Link className="menuitem" to="bieskes-compendium-app/">Home</Link>
 				{ props.bieskes.map((bieske: Bieske, index: number) => (
-					<Link className="menuitem" to={"/bieske/" + bieske.name} key={index}>{bieske.name}</Link>
+					<Link className="menuitem" to={"bieskes-compendium-app/bieske/" + bieske.name} key={index}>{bieske.name}</Link>
 				))}
 			</nav>
 			

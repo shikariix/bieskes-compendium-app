@@ -20,9 +20,9 @@ function App() {
 				
 			  {/* Routes */}
 				<Routes>
-					<Route path="/" element={<HomePage />} />
+					<Route path="bieskes-compendium-app/" element={<HomePage />} />
 					{ bieskes.map((bieske: Bieske, index: number) => (
-					<Route key={index} path={"/bieske/"+bieske.name} element={<BieskePage bieske={bieske} />} />))}
+					<Route key={index} path={"bieskes-compendium-app/bieske/"+bieske.name} element={<BieskePage bieske={bieske} />} />))}
 				</Routes>
 			</div>
 			
