@@ -19,7 +19,7 @@ function ImageBlock(props: any) {
 	}
   
 	// Fetch the external SVG
-	fetch("/img/TinyBieskes_"+props.name+"_colorbase.svg")
+	fetch("img/TinyBieskes_"+props.name+"_colorbase.svg")
 	  .then(response => response.text())
 	  .then(svgText => {
 		// Inject SVG into the DOM
