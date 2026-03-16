@@ -16,5 +16,5 @@
 	<path id="shape4" class="marking" transform="translate(13.1474645557422, 32.4972828677636)" fill="#77b3fe" fill-rule="evenodd" d="M1.42069 0C2.61389 1.05253 2.97491 2.44065 2.50373 4.16436C2.03254 5.88807 1.26137 6.87705 0.190191 7.13128C-0.0470949 5.41265 -0.0623489 4.19063 0.144429 3.46522C0.454595 2.37709 0.454595 2.37709 1.42069 0Z" sodipodi:nodetypes="czccc"/>
 	<path id="shape5" class="marking" transform="translate(31.7819455072092, 40.5463501445927)" fill="#77b3fe" fill-rule="evenodd" d="M2.59616 0C1.0911 0.869482 0.233478 1.63134 0.0233108 2.28557C-0.29194 3.26691 2.67244 2.09489 3.95378 2.50167C4.80801 2.77285 5.6063 2.88133 6.34867 2.82709C6.72832 1.65422 6.43172 0.909312 5.45885 0.592367C3.99954 0.116948 3.96395 0.101694 2.59616 0Z" sodipodi:nodetypes="czzccc"/>
 
-	<image width="48" height="48" href="/img/TinyBieskes_Earmuff_outline.png" />
+	<image width="48" height="48" href="/bieskes-compendium-app/img/TinyBieskes_Earmuff_outline.png" />
 </svg>
