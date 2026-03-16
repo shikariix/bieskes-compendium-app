@@ -3,33 +3,29 @@ import type { Bieske } from '../types/Bieske'
 import { useState } from 'react'
 
 function InfoBlock(props: any) {
-	const {tagline, description, name}: string = props;
 	return (
 		<div className="infoblock">
-			<h2>{name}</h2>
-			<label>"{tagline}"</label>
-			<p>{description}</p>
+			<h2>{props.name}</h2>
+			<label>"{props.tagline}"</label>
+			<p>{props.description}</p>
 		</div>
 	);
 }
 
-function ImageBlock(props) {
-	const {name}: string = props;
-	const colors: string[] = props.colors;
-	
-	const [currentColor, setColor] = useState(colors[0]);
+function ImageBlock(props: any) {
+	const [currentColor, setColor] = useState(props.colors[0]);
 	const handleChange = (event) => {
 		setColor(event.target.value)
 	}
   
 	// Fetch the external SVG
-	fetch("/img/TinyBieskes_"+name+"_colorbase.svg")
+	fetch("/img/TinyBieskes_"+props.name+"_colorbase.svg")
 	  .then(response => response.text())
 	  .then(svgText => {
 		// Inject SVG into the DOM
 		const container = document.getElementById('colorsContainer');
 		container.innerHTML = svgText;
-		if (!colors.includes(currentColor)) { setColor(colors[0]); }
+		if (!props.colors.includes(currentColor)) { setColor(props.colors[0]); }
 	 
 	  });
 	  //old image: <img src={"/img/TinyBieskes_"+name+".png"} alt={name} loading="eager" />
@@ -38,7 +34,7 @@ function ImageBlock(props) {
 		<div className="imageblock">
 			<div id="colorsContainer" className={"colors " + currentColor} width="200px"></div>
 			<select value={currentColor} onChange={handleChange}>
-			{ colors.map((color: string, index: number) => (<option value={color} key={index}>{color}</option>))}
+			{ props.colors.map((color: string, index: number) => (<option value={color} key={index}>{color}</option>))}
 		</select>
 		</div>
 		
@@ -47,11 +43,10 @@ function ImageBlock(props) {
 }
 
 function PropertiesBlock(props: any) {
-	const {size, classification}: string = props;
 	return (
 		<div className="propertiesblock">
-			<label>Size: {size}</label>
-			<label>Class: {classification}</label>
+			<label>Size: {props.size}</label>
+			<label>Class: {props.classification}</label>
 		</div>
 	);
 }
