@@ -30,7 +30,6 @@ function ImageBlock(props: any) {
 		}
 	 
 	  });
-	  //old image: <img src={"/img/TinyBieskes_"+name+".png"} alt={name} loading="eager" />
 	return (
 	<>
 		<div className="imageblock">
