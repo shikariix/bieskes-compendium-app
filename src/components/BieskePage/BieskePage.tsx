@@ -22,14 +22,23 @@ function ImageBlock(props: any) {
 	fetch("/bieskes-compendium-app/img/TinyBieskes_"+props.name+"_colorbase.svg")
 	  .then(response => response.text())
 	  .then(svgText => {
-		// Inject SVG into the DOM
+		  
 		const container = document.getElementById('colorsContainer');
-		if (container != null) { 
-			container.innerHTML = svgText;
-			if (!props.colors.includes(currentColor)) { setColor(props.colors[0]); }
+		if (svgText.includes("script")) { 
+			container.innerHTML = "";
+		} else {
+			// Inject SVG into the DOM
+			if (container != null) { 
+				container.innerHTML = svgText;
+				if (!props.colors.includes(currentColor)) { setColor(props.colors[0]); }
+			}
 		}
-	 
+	  })
+	  .catch(error => {
+		  console.log("error:", error);
 	  });
+	  
+	
 	return (
 	<>
 		<div className="imageblock">
