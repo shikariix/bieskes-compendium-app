@@ -24,12 +24,12 @@ function ImageBlock(props: any) {
 	  .then(svgText => {
 		const container = document.getElementById('colorsContainer');
 		if (container != null) { 
-			if (svgText.includes("script")) { 
-				container.innerHTML = "";
-			} else {
+			if (svgText.includes("svg")) { 
 				// Inject SVG into the DOM
 				container.innerHTML = svgText;
 				if (!props.colors.includes(currentColor)) { setColor(props.colors[0]); }
+			} else {
+				container.innerHTML = "";
 			}
 		}
 	  })
