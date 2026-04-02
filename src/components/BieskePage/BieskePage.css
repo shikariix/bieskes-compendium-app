@@ -13,6 +13,7 @@
 	height: 200px;
 	width: 200px;
 	grid-area: imageblock;
+	justify-self: center;
 }
 
 #bieskePage .imageblock img.outline {

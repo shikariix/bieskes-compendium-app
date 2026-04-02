@@ -2,6 +2,12 @@ import './BieskePage.css'
 import type { Bieske } from '@utils/Bieske'
 import { useState } from 'react'
 
+// interface BieskeProps {
+	// name: string;
+	// colors: string[];
+	
+// }
+
 function InfoBlock(props: any) {
 	return (
 		<div className="infoblock">
